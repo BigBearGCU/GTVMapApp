@@ -7,8 +7,9 @@
  */
 
 //var testimonyURL="http://localhost:3000/testimony/";
-var testimonyURL="http://murmuring-beyond-9809.herokuapp.com/testimony";
-var resourceURL=testimonyURL+"resources/";
+var baseURL="http://murmuring-beyond-9809.herokuapp.com/";
+var testimonyURL=baseURL+"testimony/";
+var resourceURL="https://s3-eu-west-1.amazonaws.com/gatheringthevoices/resources/";
 
 function Testimony(name,picURL,basicInfo,data)
 {
@@ -32,9 +33,7 @@ function TestimoniesViewModel()
 {
     var self=this;
     self.columnLength=ko.observable(4);
-    self.testimonies = ko.observableArray([
-        new Testimony("Dorrith Simm","resources/Anonymous.png","DORRITH SIM found solace in Scotland and penned book My Pocket about starting a new life in a foreign country, which is being distributed in schools across Renfrewshire to tie in with a website about the Holocaust.","DorrithSimm.json")
-    ]);
+    self.testimonies = ko.observableArray([]);
     self.selected=ko.observable(self.testimonies()[0]);
     self.rows = ko.computed(function()
     {
