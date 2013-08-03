@@ -16,6 +16,45 @@ circle {
 }
 
 #map {
+    position: relative;
+    top:-50px;
+    padding-left: 15px;
     width: 1024px;
     height: 500px;
+}
+
+td
+{
+    padding:15px;
+}
+
+tr{
+    padding:15px;
+}
+
+#name{
+    display: block;
+    text-align: center ;
+}
+
+#nameTitle{
+    display: block;
+    padding-left:45px;
+}
+
+#picture{
+    padding-left:20px;
+}
+
+#desc{
+    position: relative;
+    display:block;
+    padding-left: 250px;
+    top:-196px;
+    width: 400px;
+}
+.protrait{
+    display: block;
+    padding-left: 20px;
+    width:500px;
 }

@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="css/mainstyle.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/smoothness/jquery-ui.css">
     <script type="text/html" id="person-template">
-        <div id="name" data-bind="text: name">
-
+    <div class="portrait"/>
+        <div id="nameTitle" >
+            <h3 data-bind="text: name"></h3>
         </div>
-        <div id="image">
+        <div id="picture">
             <img data-bind="attr:{src: pic}" />
         </div>
         <div id="desc">
             <p data-bind="text: basicInfo"></p>
+        </div>
         </div>
     </script>
 </head>
