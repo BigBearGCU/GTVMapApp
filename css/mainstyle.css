@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    background: #E6E6E6;
+    margin: 0;
+    font: 12px sans-serif;
+}
+
+svg {
+    display: block;
+}
+
+circle {
+    stroke: black;
+    fill: brown;
+    fill-opacity: .5;
+}
+
+#map {
+    width: 1024px;
+    height: 500px;
+}

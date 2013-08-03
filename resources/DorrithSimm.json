@@ -1,0 +1,29 @@
+{
+    "type":"FeatureCollection",
+    "features":
+        [
+            {
+            "type":"Feature",
+            "name":"Kassel","geometry":{"type":"Point","coordinates":[9.4956,51.5238028]},
+            "text":"I was born in Kassel in Germany in 1931, December '31 and my name was Oppenheim. Dorrith Marianne Oppenheim - it's a mouthful"
+            },
+            {
+                "type":"Feature",
+                "name":"London",
+                "geometry":{"type":"Point","coordinates":[0.1062,51.5171]},
+                "text":"I arrived in England on the 26th of July 1939 and then my parents had managed to get guardians for me and they met me at Liverpool Street Station"
+            },
+            {
+                "type":"Feature",
+                "name":"Birmingham",
+                "geometry":{"type":"Point","coordinates":[-1.9100,52.4800]},
+                "text":"And there, you know, my guardian's brother came too, because he spoke German and we went in the car. And we stopped, I think we must have stopped in Birmingham"
+            },
+            {
+                "type":"Feature",
+                "name":"Edinburgh",
+                "geometry":{"type":"Point","coordinates":[-3.2200,55.9500]},
+                "text":"Well, to begin with I stayed in the, it was a terraced - Stevenson Terrace [Edinburgh]. The district was Balgreen, I stayed there to begin with. But, you know, it was a small flat, it was an upstairs flat and not much room"
+            }
+        ]
+}
