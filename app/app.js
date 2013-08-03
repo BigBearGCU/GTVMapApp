@@ -6,7 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var testimonyURL="http://localhost:3000/testimony/";
+//var testimonyURL="http://localhost:3000/testimony/";
+var testimonyURL="http://murmuring-beyond-9809.herokuapp.com/testimony";
+var resourceURL=testimonyURL+"resources/";
 
 function Testimony(name,picURL,basicInfo,data)
 {
@@ -61,13 +63,19 @@ function TestimoniesViewModel()
 }
 
 $(document).ready(function() {
-    jQuery.get(testimonyURL, function (data, textStatus, jqXHR) {
-        console.log("Get resposne:");
-        console.dir(data);
-        console.log(textStatus);
-        console.dir(jqXHR);
+    var vm=new TestimoniesViewModel();
+    $.getJSON('http://murmuring-beyond-9809.herokuapp.com/testimony', function(data) {
+        //console.log(data);
+        vm.testimonies.removeAll();
+        for (var k in data) {
+            console.log(data[k])
+            vm.testimonies.push(
+                new Testimony(data[k].name, resourceURL+data[k].pic, data[k].basicInfo, resourceURL+data[k].data));
+        }
+        //self.testimonies(parsed);
     });
-    ko.applyBindings(new TestimoniesViewModel());
+
+    ko.applyBindings(vm);
     toggleMainDisplay();
 });
 

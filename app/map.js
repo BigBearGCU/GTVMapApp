@@ -40,7 +40,7 @@ function toggleMapDisplay()
 function displayPointsFromJSON(name)
 {
     map.add(po.geoJson()
-        .url("resources/"+name)
+        .url(name)
         .id("majorpoint")
         .on("load", function(e)
         {
