@@ -24,6 +24,7 @@ function Testimony(name,picURL,basicInfo,data)
 
         console.log("Testimony "+testimony.name());
         vm.selected(testimony);
+        createMap();
         toggleMainScreen();
         toggleMainDisplay();
         toggleMapDisplay();
@@ -86,6 +87,7 @@ $(document).ready(function() {
 function toggleMainScreen()
 {
     $("#mainMenu").toggle();
+
 }
 
 function toggleMainDisplay()

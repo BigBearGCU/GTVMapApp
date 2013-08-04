@@ -15,12 +15,19 @@ circle {
     fill-opacity: .5;
 }
 
+.selected{
+    stroke:black;
+    fill:red;
+    fill-opacity:1.0;
+}
+
 #map {
     position: relative;
     top:-50px;
     padding-left: 15px;
     width: 1024px;
     height: 500px;
+    pointer-events: none;
 }
 
 td
@@ -35,15 +42,24 @@ tr{
 #name{
     display: block;
     text-align: center ;
+    pointer-events: none;
 }
 
 #nameTitle{
     display: block;
     padding-left:45px;
+    pointer-events: none;
 }
 
 #picture{
     padding-left:20px;
+    pointer-events: none;
+}
+
+.portraitImages{
+    width: 192px;
+    height:193px;
+    pointer-events: none;
 }
 
 #desc{
@@ -52,9 +68,38 @@ tr{
     padding-left: 250px;
     top:-196px;
     width: 400px;
+    pointer-events: none;
 }
 .protrait{
     display: block;
     padding-left: 20px;
     width:500px;
+    pointer-events: none;
+}
+
+#info{
+    position:relative;
+    top:-500px;
+    left: 1080px;
+    width: 200px;
+    pointer-events: none;
+}
+#advance
+{
+    position: relative;
+    top:45px;
+    left: 1150px;
+    width: 45px;
+}
+
+#back
+{
+    position: relative;
+    left: 1080px;
+    width: 45px;
+}
+.button
+{
+    width:45px;
+    height: 45px;
 }

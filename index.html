@@ -17,7 +17,7 @@
             <h3 data-bind="text: name"></h3>
         </div>
         <div id="picture">
-            <img data-bind="attr:{src: pic}" />
+            <img class="portraitImages" data-bind="attr:{src: pic}" />
         </div>
         <div id="desc">
             <p data-bind="text: basicInfo"></p>
@@ -26,6 +26,9 @@
     </script>
 </head>
 <body>
+<div id="bannerImage">
+    <img src="resources/Logo.jpg"/>
+</div>
 <div id="mainMenu">
     <table>
         <tbody data-bind="foreach: rows">
@@ -33,7 +36,7 @@
             <td>
                 <div class="portrait" data-bind="click: logMouseClick">
                     <div id="image">
-                        <img data-bind="attr:{src: pic}" />
+                        <img class="portraitImages" data-bind="attr:{src: pic}" />
                     </div>
                     <div id="name" data-bind="text: name">
 
@@ -46,9 +49,14 @@
 
 </div>
 <div id="display" data-bind="template: { name: 'person-template', data: selected }">
-
+</div>
+<div id="advance">
+    <img class="button" src="resources/nextButton.png"/>
+</div>
+<div id="back">
+    <img class="button" src="resources/backButton.png"/>
 </div>
 <div id="map"></div>
-<div id="dialog"></div>
+<div id="info"></div>
 </body>
 </html>
