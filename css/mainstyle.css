@@ -1,6 +1,9 @@
 html, body {
     height: 100%;
-    background: #E6E6E6;
+    /*background-image:url('../resources/Background Blank.jpg');*/
+    background-size: auto;
+    background-repeat: no-repeat;
+    /*background: #E6E6E6;*/
     margin: 0;
     font: 12px sans-serif;
 }
