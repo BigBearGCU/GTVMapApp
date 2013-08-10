@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gathering The Voices Map</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="./lib/polymaps.min.js"></script>
+    <script src="app/map.js"></script>
+    <script src="./app/app.js"></script>
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/smoothness/jquery-ui.css">
+    <script type="text/html" id="person-template">
+    <div class="portrait"/>
+        <div id="nameTitle" >
+            <h3 data-bind="text: name"></h3>
+        </div>
+        <div id="picture">
+            <img class="portraitImages" data-bind="attr:{src: pic}" />
+        </div>
+        <div id="desc">
+            <p data-bind="text: basicInfo"></p>
+        </div>
+        </div>
+    </script>
+</head>
+<body>
+<div id="bannerImage">
+    <img src="resources/Logo.jpg"/>
+</div>
+<div id="mainMenu">
+    <table>
+        <tbody data-bind="foreach: rows">
+            <tr data-bind="foreach: $data">
+            <td>
+                <div class="portrait" data-bind="click: logMouseClick">
+                    <div id="image">
+                        <img class="portraitImages" data-bind="attr:{src: pic}" />
+                    </div>
+                    <div id="name" data-bind="text: name">
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<div id="display" data-bind="template: { name: 'person-template', data: selected }">
+</div>
+<div id="advance">
+    <img class="button" src="resources/nextButton.png"/>
+</div>
+<div id="back">
+    <img class="button" src="resources/backButton.png"/>
+</div>
+<div id="map"></div>
+<div id="info"></div>
+</body>
+</html>
